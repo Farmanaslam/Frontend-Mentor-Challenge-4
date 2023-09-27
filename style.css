@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Inter&family=Lexend+Deca&family=Outfit:wght@400;700&display=swap');
+
+
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue:hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white-main:hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-headings:hsla(0, 0%, 100%, 0.6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+  justify-content: center;
+align-items: center;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  width: 65%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.text{
+    background-color: var(--dark-desaturated-blue);
+   padding: 35px;
+  
+}
+.text>h1{
+    margin-top: 30px;
+    font-size: 30px;
+    color: var(--white);
+    font-family:"Lexend Deca-700", sans-serif;
+}
+.text span{
+    color: var(--soft-violet);
+}
+.text>p{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-family: "Lexend Deca",sans-serif;
+    color: var(--slightly-transparent-white-headings);
+    font-size: 14px;
+    line-height: 22px;
+}
+.img{
+    position: relative;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+
+}
+.img::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--soft-violet);
+    opacity: .6;
+
+
+}
+.row{
+    display: flex;
+    gap:50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.row h1{
+    color: var(--white);
+    font-family: "Inter";
+    font-size: 20px;
+}
+.row p{
+    color: var(--slightly-transparent-white-headings);
+    font-family: "Lexend Deca";
+    font-size: 11px;
+}
+
+@media screen and (max-width:1024px) {
+    body{
+       padding-top: 50px;
+       padding-bottom: 50px;
+      
+    }
+    .container{
+        display: flex;
+      flex-direction: column-reverse;
+       border-radius: 10px;
+    }
+    .text{
+      
+    }
+    .text h1{
+        font-size: 16px;
+        text-align: center;
+      margin-top: 0;
+    }
+ 
+    .text p{
+        text-align: center;
+        font-size: 9px;
+        margin-top: 15px;
+        line-height: 18px;
+    }
+    .row{
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        margin-top: 0;
+    }
+    .row p{
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
